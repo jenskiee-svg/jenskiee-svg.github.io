@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Achievements | Jenskiee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:url("bg1.png") center/cover fixed;
+color:white;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.72);
+backdrop-filter:(10px);
+z-index:-1;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px 0;
+}
+
+h1{
+text-align:center;
+font-size:2.7rem;
+margin-bottom:10px;
+text-shadow:2px 2px 8px black;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:40px;
+color:#ddd;
+text-shadow:2px 2px 5px black;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.photo{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.15);
+cursor:pointer;
+transition:.35s;
+}
+
+.photo:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(255,255,255,.35);
+}
+
+.photo img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.caption{
+padding:15px;
+text-align:center;
+font-weight:500;
+text-shadow:2px 2px 5px black;
+}
+
+/* Lightbox */
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.92);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:35px;
+font-size:35px;
+cursor:pointer;
+}
+
+/* Back Button */
+
+.back{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:22px;
+box-shadow:0 0 20px white;
+transition:.3s;
+}
+
+.back:hover{
+transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Achievements</h1>
+
+<p class="subtitle">
+Every achievement reflects my dedication, perseverance, and commitment to continuous growth.
+</p>
+
+<div class="gallery">
+
+
+<div class="photo">
+<img src="achieve1.png" alt="">
+<div class="caption">Sports Medal</div>
+</div>
+
+<div class="photo">
+<img src="achieve3.png" alt="">
+<div class="caption">Certificate of Recognition</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+<span class="close">&times;</span>
+
+<img id="preview">
+
+</div>
+
+<a href="gallery.html" class="back">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<script>
+
+const photos=document.querySelectorAll(".photo img");
+const lightbox=document.getElementById("lightbox");
+const preview=document.getElementById("preview");
+
+photos.forEach(photo=>{
+
+photo.onclick=()=>{
+
+preview.src=photo.src;
+lightbox.style.display="flex";
+
+};
+
+});
+
+lightbox.onclick=()=>{
+
+lightbox.style.display="none";
+
+};
+
+</script>
+
+</body>
+</html>
+```

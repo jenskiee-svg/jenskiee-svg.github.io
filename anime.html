@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anime Recommendations | Jenskiee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:url("bg1.png") center/cover fixed;
+color:white;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.30);
+backdrop-filter:(10px);
+z-index:-1;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+padding:50px 0;
+}
+
+h1{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:10px;
+text-shadow:2px 2px 8px black;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:45px;
+color:#ddd;
+text-shadow:2px 2px 5px black;
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+overflow:hidden;
+transition:.35s;
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(255,255,255,.35);
+
+}
+
+.card img{
+
+width:100%;
+height:360px;
+object-fit:cover;
+
+}
+
+.info{
+
+padding:20px;
+
+}
+
+.info h2{
+
+margin-bottom:10px;
+
+}
+
+.info p{
+
+margin:8px 0;
+line-height:1.6;
+color:#ddd;
+
+}
+
+.lightbox{
+
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+
+}
+
+.back{
+
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:22px;
+box-shadow:0 0 20px white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Anime Recommendations</h1>
+
+<p class="subtitle">
+Some of my favourite anime that I highly recommend watching.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="anime2.png">
+
+<div class="info">
+
+<h2>fairytail</h2>
+
+<p><b>⭐ Rating:</b> 10/10</p>
+
+<p><b>🎭 Genre:</b> Adventure</p>
+
+<p>In a magical world in the middle of the land of Fiore, Lucy Heartfilia joins the Fairy Tail Wizards' Guild. Many exciting adventures await her alongside Natsu Dragneel, Happy, Erza Scarlet and Gray Fullbuster.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime13.png">
+
+<div class="info">
+
+<h2>Demon Slayer</h2>
+
+<p><b>⭐ Rating:</b> 9.8/10</p>
+
+<p><b>🎭 Genre:</b> Action, Adventure</p>
+
+<p>Beautiful animation and exciting sword fights with a heartfelt story.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime9.png">
+
+<div class="info">
+
+<h2>Haikyuu!!</h2>
+
+<p><b>⭐ Rating:</b> 10/10</p>
+
+<p><b>🎭 Genre:</b> Sports, Comedy</p>
+
+<p>An inspiring volleyball anime about teamwork, passion, and determination.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime17.png">
+
+<div class="info">
+
+<h2>Your Name</h2>
+
+<p><b>⭐ Rating:</b> 10/10</p>
+
+<p><b>🎭 Genre:</b> Romance, Fantasy</p>
+
+<p>A visually stunning movie with an emotional and unforgettable story.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime3.png">
+
+<div class="info">
+
+<h2>Naruto</h2>
+
+<p><b>⭐ Rating:</b> ∞/10</p>
+
+<p><b>🎭 Genre:</b> Action, Fantasy, Comedy</p>
+
+<p>Never give up on your dreams. Follow Naruto Uzumaki's inspiring journey from an outcast to a legendary ninja in a story filled with action, friendship, sacrifice, and unforgettable life lessons.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime15.png">
+
+<div class="info">
+
+<h2>Spy × Family</h2>
+
+<p><b>⭐ Rating:</b> 9/10</p>
+
+<p><b>🎭 Genre:</b> Comedy, Action</p>
+
+<p>A wholesome and hilarious story about a unique family with hidden secrets.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime4.png">
+
+<div class="info">
+
+<h2>One Piece</h2>
+
+<p><b>⭐ Rating:</b> ∞/10</p>
+
+<p><b>🎭 Genre:</b> Comedy, Action, Fantasy, Mystery</p>
+
+<p>An epic pirate adventure about chasing dreams, friendship, freedom, and the legendary treasure, the One Piece.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime5.png">
+
+<div class="info">
+
+<h2>Jujutsu Kaisen</h2>
+
+<p><b>⭐ Rating:</b> 10/10</p>
+
+<p><b>🎭 Genre:</b> Action, Dark Fantasy, Supernatural</p>
+
+<p>Dark fantasy action where sorcerers battle deadly curses to protect humanity.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime6.png">
+
+<div class="info">
+
+<h2>That time i got reincarnated as a Slime</h2>
+
+<p><b>⭐ Rating:</b> 10/10</p>
+
+<p><b>🎭 Genre:</b> Magic, Fantasy, Adventure, Comedy, Action</p>
+
+<p>An ordinary man is reborn as a slime and builds a powerful nation through friendship, strategy, and adventure.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="anime7.png">
+
+<div class="info">
+
+<h2>My Hero Academia</h2>
+
+<p><b>⭐ Rating:</b> 9/10</p>
+
+<p><b>🎭 Genre:</b> Action, Adventure, Fantasy, School</p>
+
+<p>In a world of superpowers, a determined boy strives to become the greatest hero.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime8.png">
+
+<div class="info">
+
+<h2>Black Clover</h2>
+
+<p><b>⭐ Rating:</b> 100/10</p>
+
+<p><b>🎭 Genre:</b> Action, Fantasy, Magic, Adventure, Comedy</p>
+
+<p>A magicless boy fights to become the Wizard King through determination and hard work.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime10.png">
+
+<div class="info">
+
+<h2>Kuroko's Basketball</h2>
+
+<p><b>⭐ Rating:</b> 9.5/10</p>
+
+<p><b>🎭 Genre:</b> Sports, Comedy, School, </p>
+
+<p>An exciting basketball anime where teamwork, talent, and determination take center court.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime11.png">
+
+<div class="info">
+
+<h2>Death Note</h2>
+
+<p><b>⭐ Rating:</b> 11/10</p>
+
+<p><b>🎭 Genre:</b> Paychological, Thriller, Mystery, Crime, Supernatural</p>
+
+<p>A brilliant student discovers a supernatural notebook that can kill anyone whose name is written in it, leading to a deadly battle of wits.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime12.png">
+
+<div class="info">
+
+<h2>Dragon Ball</h2>
+
+<p><b>⭐ Rating:</b> 100/10</p>
+
+<p><b>🎭 Genre:</b> Action, Fantasy, Comedy, adventure</p>
+
+<p>Follow Goku's journey as he grows stronger, protects Earth, and seeks the legendary Dragon Balls.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime14.png">
+
+<div class="info">
+
+<h2>Yuyu hakusho</h2>
+
+<p><b>⭐ Rating:</b> 9/10</p>
+
+<p><b>🎭 Genre:</b> Action, Fantasy, Supernatural,</p>
+
+<p>A teenage delinquent becomes a Spirit Detective, battling demons and protecting the human world.</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="anime16.png">
+
+<div class="info">
+
+<h2>Hunter X Hunter</h2>
+
+<p><b>⭐ Rating:</b> 100/10</p>
+
+<p><b>🎭 Genre:</b> Action, Fantasy, Adventure</p>
+
+<p>A young boy sets out to become a Hunter and find his father while facing dangerous adventures and powerful enemies.</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+<img id="preview">
+
+</div>
+
+<a href="gallery.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<script>
+
+const cards=document.querySelectorAll(".card img");
+
+const lightbox=document.getElementById("lightbox");
+
+const preview=document.getElementById("preview");
+
+cards.forEach(card=>{
+
+card.onclick=()=>{
+
+preview.src=card.src;
+
+lightbox.style.display="flex";
+
+}
+
+});
+
+lightbox.onclick=()=>{
+
+lightbox.style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>

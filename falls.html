@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Falls | Jenelyn Auditor</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.35)),
+url("bg1.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+color:white;
+
+}
+
+/* Back Button */
+
+.back{
+
+position:fixed;
+
+top:25px;
+left:25px;
+
+width:55px;
+height:55px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:rgba(0,0,0,.30);
+
+backdrop-filter:(12px);
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.back:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 20px white;
+
+}
+
+/* Container */
+
+.container{
+
+max-width:1200px;
+
+margin:90px auto;
+
+padding:20px;
+
+}
+
+/* Title */
+
+.title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.title h1{
+
+font-size:48px;
+
+text-shadow:2px 2px 10px black;
+
+margin-bottom:10px;
+
+}
+
+.title p{
+
+font-size:17px;
+
+text-shadow:2px 2px 8px black;
+
+}
+
+/* Section */
+
+.section{
+
+margin-top:50px;
+
+}
+
+.section h2{
+
+margin-bottom:20px;
+
+font-size:32px;
+
+text-shadow:2px 2px 8px black;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+/* Images */
+
+.gallery img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+background:rgba(0,0,0,.15);
+
+padding:5px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.20),
+0 0 15px rgba(255,255,255,.08);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px rgba(255,255,255,.35);
+
+}
+
+/* Lightbox */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.95);
+
+justify-content:center;
+align-items:center;
+
+z-index:9999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+
+border-radius:20px;
+
+box-shadow:0 0 35px rgba(255,255,255,.35);
+
+}
+
+.close{
+
+position:absolute;
+
+top:20px;
+right:35px;
+
+font-size:45px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title h1{
+
+font-size:36px;
+
+}
+
+.section h2{
+
+font-size:26px;
+
+}
+
+.gallery img{
+
+height:220px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Back Button -->
+
+<a href="others.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<div class="container">
+
+<div class="title">
+
+<h1>🌊 Waterfalls Adventure</h1>
+
+<p>
+
+Explore my unforgettable adventures and memories from different waterfalls.
+
+</p>
+
+</div>
+
+<!-- ==================== -->
+<!-- Towing Falls -->
+<!-- ==================== -->
+
+<div class="section">
+
+<h2>🌊 Towing Falls</h2>
+
+<div class="gallery">
+
+<img src="falls1.png" onclick="openImage(this.src)">
+
+<img src="falls2.png" onclick="openImage(this.src)">
+
+<img src="falls5.png" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+<!-- ==================== -->
+<!-- Daranak Falls -->
+<!-- ==================== -->
+
+<div class="section">
+
+<h2>🌊 Daranak Falls</h2>
+
+<div class="gallery">
+
+<img src="falls7.png" onclick="openImage(this.src)">
+
+<img src="falls6.png" onclick="openImage(this.src)">
+
+<img src="falls8.png" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+<!-- ==================== -->
+<!-- Taytay Falls -->
+<!-- ==================== -->
+
+<div class="section">
+
+<h2>🌊 Taytay Falls</h2>
+
+<div class="gallery">
+
+<img src="falls9.png" onclick="openImage(this.src)">
+
+<img src="falls3.png" onclick="openImage(this.src)">
+
+<img src="falls10.png" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Lightbox -->
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+
+<span class="close">&times;</span>
+
+<img id="preview">
+
+</div>
+
+<script>
+
+function openImage(image){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("preview").src=image;
+
+}
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+document.addEventListener("keydown",function(event){
+
+if(event.key==="Escape"){
+
+closeImage();
+
+}
+
+});
+
+document.getElementById("preview").onclick=function(event){
+
+event.stopPropagation();
+
+};
+
+</script>
+
+</body>
+</html>

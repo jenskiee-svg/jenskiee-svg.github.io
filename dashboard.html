@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | Jenelyn Auditor</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.25),
+    rgba(0,0,0,.35)),
+    url("bg1.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+Floating Particles
+========================= */
+
+.particle{
+
+    position:fixed;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    opacity:.5;
+    animation:float 12s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+opacity:0;
+
+}
+
+30%{
+
+opacity:.6;
+
+}
+
+100%{
+
+transform:translateY(-100vh);
+opacity:0;
+
+}
+
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+padding:30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+backdrop-filter:blur(10px);
+
+background:rgba(255,255,255,.08);
+
+border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid white;
+
+box-shadow:0 0 20px white;
+
+}
+
+.logo h2{
+
+color:white;
+
+font-size:28px;
+
+text-shadow:2px 2px 6px black;
+
+}
+
+header span{
+
+color:#d9d9d9;
+
+font-size:14px;
+
+text-shadow:2px 2px 6px black;
+
+}
+
+/* =========================
+TITLE
+========================= */
+
+.title{
+
+text-align:center;
+
+margin-top:60px;
+
+}
+
+.title h1{
+
+font-size:50px;
+
+color:white;
+
+text-shadow:3px 3px 10px black;
+
+}
+
+.title p{
+
+margin-top:15px;
+
+font-size:18px;
+
+color:#efefef;
+
+text-shadow:2px 2px 8px black;
+
+}
+
+/* =========================
+GRID
+========================= */
+
+.dashboard{
+
+max-width:1200px;
+
+margin:60px auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+padding:20px;
+
+}
+
+/* =========================
+CARD
+========================= */
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+padding:35px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.4);
+
+animation:fadeUp .9s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 25px rgba(255,255,255,.25);
+
+}
+
+.card i{
+
+font-size:55px;
+
+color:white;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px white;
+
+}
+
+.card h2{
+
+color:white;
+
+margin-bottom:15px;
+
+text-shadow:2px 2px 6px black;
+
+}
+
+.card p{
+
+color:#e5e5e5;
+
+line-height:1.7;
+
+text-shadow:2px 2px 6px black;
+
+margin-bottom:25px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:13px 28px;
+
+border-radius:50px;
+
+background:white;
+
+color:#222;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+box-shadow:0 0 20px rgba(255,255,255,.4);
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 30px white;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Particles -->
+
+<div class="particle" style="left:8%;animation-delay:0s;"></div>
+<div class="particle" style="left:20%;animation-delay:2s;"></div>
+<div class="particle" style="left:37%;animation-delay:4s;"></div>
+<div class="particle" style="left:56%;animation-delay:1s;"></div>
+<div class="particle" style="left:73%;animation-delay:5s;"></div>
+<div class="particle" style="left:92%;animation-delay:3s;"></div>
+
+<header>
+
+<div class="logo">
+
+<img src="profile.png">
+
+<div>
+
+<h2>Jenskiee</h2>
+
+<span>BS Criminology Student | Athlete</span>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="title">
+
+<h1>Welcome to My Dashboard</h1>
+
+<p>
+Choose a section below to explore my story, journey,
+gallery, and contact information.
+</p>
+
+</section>
+
+<section class="dashboard">
+
+<!-- About -->
+
+<div class="card">
+
+<i class="fa-solid fa-id-card"></i>
+
+<h2>About Me</h2>
+
+<p>
+Discover who I am, my educational journey,
+sports career, hobbies,
+future aspirations,
+and lessons.
+</p>
+
+<a href="about-me.html" class="btn">
+Open
+</a>
+
+</div>
+
+<!-- Gallery -->
+
+<div class="card">
+
+<i class="fa-solid fa-photo-film"></i>
+
+<h2>Gallery</h2>
+
+<p>
+Explore memorable moments,
+family,
+sports,
+travels,
+achievements,
+and anime recommendations.
+</p>
+
+<a href="gallery.html" class="btn">
+Open
+</a>
+
+</div>
+<!-- =========================
+CONTACT CARD
+========================= -->
+
+<div class="card">
+
+    <i class="fa-solid fa-address-card"></i>
+
+    <h2>Contact</h2>
+
+    <p>
+        you can message me through my
+        social media accounts, email,
+        or mobile number.
+    </p>
+
+    <a href="contact.html" class="btn">
+        Open
+    </a>
+
+</div>
+
+<!-- =========================
+LOGOUT CARD
+========================= -->
+
+<div class="card">
+
+    <i class="fa-solid fa-door-open"></i>
+
+    <h2>Logout</h2>
+
+    <p>
+        Exit the dashboard and
+        return safely to the homepage.
+    </p>
+
+    <a href="index.html" class="btn">
+        Logout
+    </a>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Jenskiee |
+    BS Criminology Student | Athlete
+
+</footer>
+
+<style>
+
+footer{
+
+    text-align:center;
+
+    color:white;
+
+    margin:50px 0 30px;
+
+    font-size:15px;
+
+    text-shadow:2px 2px 6px black;
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.title h1{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:15px;
+
+}
+
+.logo{
+
+flex-direction:column;
+
+}
+
+.logo img{
+
+width:90px;
+height:90px;
+
+}
+
+.title{
+
+margin-top:40px;
+
+padding:0 20px;
+
+}
+
+.title h1{
+
+font-size:34px;
+
+}
+
+.title p{
+
+font-size:16px;
+
+}
+
+.dashboard{
+
+padding:20px;
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:30px;
+
+}
+
+.card i{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.title h1{
+
+font-size:28px;
+
+}
+
+.btn{
+
+width:100%;
+
+padding:14px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+/* =========================
+Smooth Fade Transition
+========================= */
+
+document.querySelectorAll(".btn").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const destination=this.href;
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href=destination;
+
+},500);
+
+});
+
+});
+
+/* Fade In */
+
+window.onload=function(){
+
+document.body.style.opacity="1";
+
+document.body.style.transition="opacity .5s";
+
+};
+
+</script>
+
+</body>
+</html>
+
