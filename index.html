@@ -439,19 +439,7 @@ height:120px;
 <div class="glass">
 
 <!-- PROFILE IMAGE -->
-<div class="profile-container">
-
-    <img src="profile.png" class="profile" id="profileBtn" alt="Jenskiee">
-
-    <div class="music-info">
-        🎵 <strong id="musicStatus">Music</strong><br>
-        Click my profile picture to play or pause my favorite song.
-    </div>
-
-    <!-- Secure Dashboard Button -->
-    <a href="dashboard.html" id="dashboardBtn" class="dashboard-btn">
-        <i class="fa-solid fa-lock"></i> Secure Dashboard
-    </a>
+<img src="profile.png" class="profile" id="profileBtn">  
 
 </div>
 <h1>Jenskiee</h1>
@@ -584,34 +572,6 @@ window.location.href="dashboard.html";
 }else{
 
 alert("Incorrect access code.");
-
-}
-
-}
-audio id="bgMusic" loop>
-    <source src="palayo.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-const profileBtn = document.getElementById("profileBtn");
-const bgMusic = document.getElementById("bgMusic");
-const musicStatus = document.getElementById("musicStatus");
-
-let isPlaying = false;
-
-profileBtn.addEventListener("click", function () {
-
-    if (isPlaying) {
-        bgMusic.pause();
-        isPlaying = false;
-        musicStatus.textContent = "Music";
-        profileBtn.style.boxShadow = "0 0 20px white";
-    } else {
-        bgMusic.play();
-        isPlaying = true;
-        musicStatus.textContent = "Now Playing";
-        profileBtn.style.boxShadow = "0 0 35px #00ffd5";
-    }
 
 });
 </script>
