@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Others | Jenelyn Auditor</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.35)),
+url("bg1.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* ===========================
+Back Button
+=========================== */
+
+.back{
+
+position:fixed;
+
+top:25px;
+left:25px;
+
+width:55px;
+height:55px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:rgba(0,0,0,.20);
+
+backdrop-filter:(12px);
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+.back:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 20px white;
+
+}
+
+/* ===========================
+Container
+=========================== */
+
+.container{
+
+max-width:1300px;
+
+margin:90px auto;
+
+padding:20px;
+
+}
+
+/* ===========================
+Title
+=========================== */
+
+.title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.title h1{
+
+font-size:48px;
+
+font-weight:700;
+
+text-shadow:2px 2px 10px black;
+
+margin-bottom:10px;
+
+}
+
+.title p{
+
+font-size:18px;
+
+color:#f2f2f2;
+
+text-shadow:2px 2px 8px black;
+
+}
+
+/* ===========================
+Gallery Grid
+=========================== */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,1fr));
+
+gap:30px;
+
+}
+
+/* ===========================
+Cards
+=========================== */
+
+.card{
+
+background:rgba(0,0,0,.30);
+
+backdrop-filter:(12px);
+
+border:1px solid rgba(255,255,255,.18);
+
+border-radius:25px;
+
+padding:20px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.20);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 25px rgba(255,255,255,.20);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+margin-bottom:18px;
+
+transition:.4s;
+
+}
+
+.card img:hover{
+
+transform:scale(1.03);
+
+}
+
+.card h2{
+
+margin-bottom:12px;
+
+font-size:28px;
+
+text-shadow:2px 2px 8px black;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#ededed;
+
+text-shadow:2px 2px 6px black;
+
+margin-bottom:22px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:13px 30px;
+
+background:white;
+
+color:#222;
+
+font-weight:600;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s;
+
+box-shadow:
+0 0 18px rgba(255,255,255,.25);
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 30px white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Back Button -->
+
+<a href="gallery.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<div class="container">
+
+<div class="title">
+
+<h1>Explore More Adventures</h1>
+
+<p>
+
+Nature, history, and unforgettable memories beyond my sports and travels.
+
+</p>
+
+</div>
+
+<div class="grid">
+
+<!-- ===========================
+Falls
+=========================== -->
+
+<div class="card">
+
+<img src="falls11.png" alt="Falls">
+
+<h2>
+<i class="fa-solid fa-water"></i>
+Falls
+</h2>
+
+<p>
+
+Explore my memorable adventures at
+Towing Falls, Daranak Falls,
+and Taytay Falls.
+
+</p>
+
+<a href="falls.html" class="btn">
+
+Explore
+
+</a>
+
+</div>
+
+<!-- ===========================
+Hiking
+=========================== -->
+
+<div class="card">
+
+<img src="hiking1.png" alt="Hiking">
+
+<h2>
+<i class="fa-solid fa-mountain"></i>
+Hiking
+</h2>
+
+<p>
+
+Experience my hiking journey at
+Mt. Ulap and Mt. Yangbew,
+filled with breathtaking views.
+
+</p>
+
+<a href="hiking.html" class="btn">
+
+Explore
+
+</a>
+
+</div>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<p>
+
+© 2026 Jenelyn Auditor | Personal Portfolio
+
+</p>
+
+</footer>
+
+<!-- ===========================
+Floating Particles
+=========================== -->
+
+<div class="particle" style="left:10%; animation-delay:0s;"></div>
+<div class="particle" style="left:25%; animation-delay:3s;"></div>
+<div class="particle" style="left:40%; animation-delay:6s;"></div>
+<div class="particle" style="left:55%; animation-delay:2s;"></div>
+<div class="particle" style="left:70%; animation-delay:5s;"></div>
+<div class="particle" style="left:85%; animation-delay:1s;"></div>
+
+<style>
+
+/* ===========================
+Floating Particles
+=========================== */
+
+.particle{
+
+position:fixed;
+
+bottom:-20px;
+
+width:5px;
+height:5px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.4;
+
+animation:float 15s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+Footer
+=========================== */
+
+footer{
+
+text-align:center;
+
+margin:60px 0 25px;
+
+color:white;
+
+font-size:15px;
+
+text-shadow:2px 2px 6px black;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.title h1{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+padding:15px;
+
+}
+
+.title h1{
+
+font-size:34px;
+
+}
+
+.title p{
+
+font-size:16px;
+
+}
+
+.card{
+
+padding:18px;
+
+}
+
+.card img{
+
+height:200px;
+
+}
+
+.card h2{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.title h1{
+
+font-size:28px;
+
+}
+
+.title p{
+
+font-size:15px;
+
+}
+
+.card img{
+
+height:180px;
+
+}
+
+.btn{
+
+width:100%;
+
+padding:12px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+/* ===========================
+Smooth Page Transition
+=========================== */
+
+document.querySelectorAll(".btn").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const link=this.href;
+
+document.body.style.opacity="0";
+
+setTimeout(function(){
+
+window.location.href=link;
+
+},300);
+
+});
+
+});
+
+window.onload=function(){
+
+document.body.style.opacity="1";
+
+document.body.style.transition="opacity .3s ease";
+
+};
+
+</script>
+
+</body>
+</html>
+
