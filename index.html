@@ -44,7 +44,7 @@ body::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.30);
 
 }
 
@@ -102,9 +102,9 @@ CARD
     width:90%;
     max-width:700px;
 
-    background:rgba(0,0,0,.30);
+    background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:(10px);
 
     border:1px solid rgba(255,255,255,.2);
 
@@ -439,15 +439,16 @@ height:120px;
 <div class="glass">
 
 <!-- PROFILE IMAGE -->
-<img src="profile.png" class="profile" id="profileBtn">    
-   
-<h1>Jenskiee</h1>
+
+<img src="profile.png" class="profile" id="profileBtn">
+
+<h1>Jenelyn Auditor</h1>
 
 <h3>BS Criminology Student | Athlete</h3>
 
 <p>
 
-Welcome to my World.
+Welcome to my personal space.
 This website showcases my journey,
 achievements, hobbies, experiences,
 and contact information.
@@ -456,13 +457,15 @@ about who I am.
 
 </p>
 
-<button class="enter-btn" id="enterBtn"=
+<button class="enter-btn" id="enterBtn">
 
 <i class="fa-solid fa-user-shield"></i>
 
-secure Dashboard
+Secure Dashboard
 
 </button>
+
+</div>
 
 </div>
 
@@ -472,23 +475,24 @@ secure Dashboard
 
 <div class="modal-content">
 
-<h2><i class="fa-solid fa-lock"></i> Security Verification</h2>
+<h2>
 
-<p style="color:white; margin-bottom:15px;">
-Unscramble my first name to enter the dashboard.
-</p>
+<i class="fa-solid fa-lock"></i>
 
-<h3 style="color:#ffffff; letter-spacing:8px;">
-Y N E J L E N
-</h3>
+Security Verification
+
+</h2>
+
+<div class="input-group">
 
 <input
 type="password"
 id="password"
-placeholder="Enter the correct name">
+placeholder="Enter Access Code">
 
 <i class="fa-solid fa-eye toggle" id="toggle"></i>
 
+</div>
 
 <div class="modal-buttons">
 
@@ -559,22 +563,41 @@ toggle.classList.add("fa-eye");
 
 // Login
 
-document.getElementById("login").onclick=function()
-{
+document.getElementById("login").onclick=function(){
 
 let code=pass.value.toLowerCase().trim();
 
-if(code==="jenelyn")
-{
+if(code==="jenelyn"){
 
-window.location.href="pages/dashboard.html";
+window.location.href="dashboard.html";
 
 }else{
 
 alert("Incorrect access code.");
 
-});
+}
+
+}
+
 </script>
 
 </body>
 </html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
