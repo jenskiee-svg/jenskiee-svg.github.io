@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jenskiee | Personal Website</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:url("bg1.png") center center/cover no-repeat fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+
+}
+
+/* ==========================
+   DARK OVERLAY
+========================== */
+
+body::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+   FLOATING PARTICLES
+========================== */
+
+.particle{
+
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    opacity:.4;
+    animation:float 10s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+50%{
+opacity:.7;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+/* ==========================
+   GLASS CARD
+========================== */
+
+.container{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.glass{
+
+    width:90%;
+    max-width:700px;
+
+    background:rgba(0,0,0,.30);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+    animation:fadeUp 1.2s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+.profile{
+
+width:145px;
+height:145px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid white;
+
+box-shadow:
+0 0 20px white,
+0 0 45px rgba(255,255,255,.6);
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.profile:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 30px white,
+0 0 80px white;
+
+}
+
+/* Music Playing Effect */
+
+.profile.playing{
+
+border-color:#00ffd5;
+
+box-shadow:
+0 0 35px #00ffd5,
+0 0 70px #00ffd5;
+
+}
+
+/* ==========================
+   MUSIC INFO
+========================== */
+
+.music-info{
+
+margin-top:15px;
+
+color:white;
+
+font-size:15px;
+
+text-shadow:2px 2px 5px black;
+
+}
+
+.music-info i{
+
+color:#00ffd5;
+
+margin-right:8px;
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+h1{
+
+margin-top:25px;
+
+font-size:42px;
+
+color:white;
+
+text-shadow:2px 2px 6px black;
+
+}
+
+h3{
+
+margin-top:10px;
+
+font-weight:400;
+
+color:#e6e6e6;
+
+text-shadow:2px 2px 5px black;
+
+}
+
+p{
+
+margin-top:25px;
+
+line-height:1.8;
+
+color:white;
+
+text-shadow:2px 2px 5px black;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.enter-btn{
+
+margin-top:35px;
+
+padding:15px 40px;
+
+font-size:16px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#222;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(255,255,255,.4);
+
+}
+
+.enter-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 35px white;
+
+}
+
+/* ==========================
+   MODAL
+========================== */
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.8);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.modal-content{
+
+width:90%;
+max-width:420px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.2);
+
+text-align:center;
+
+animation:fadeUp .5s;
+
+}
+
+.modal h2{
+
+color:white;
+
+margin-bottom:20px;
+
+text-shadow:2px 2px 5px black;
+
+}
+
+.input-group{
+
+position:relative;
+
+}
+
+input{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:15px;
+
+margin-bottom:20px;
+
+outline:none;
+
+}
+
+.toggle{
+
+position:absolute;
+
+right:15px;
+
+top:15px;
+
+cursor:pointer;
+
+color:#333;
+
+}
+
+.modal-buttons{
+
+display:flex;
+
+gap:10px;
+
+justify-content:center;
+
+}
+
+.modal button{
+
+padding:12px 18px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.cancel{
+
+background:#666;
+color:white;
+
+}
+
+.login{
+
+background:white;
+color:#222;
+
+}
+
+.modal button:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.glass{
+padding:30px;
+}
+
+h1{
+font-size:30px;
+}
+
+.profile{
+width:120px;
+height:120px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Particles -->
+
+<div class="particle" style="left:5%;animation-delay:0s;"></div>
+<div class="particle" style="left:18%;animation-delay:3s;"></div>
+<div class="particle" style="left:34%;animation-delay:5s;"></div>
+<div class="particle" style="left:48%;animation-delay:1s;"></div>
+<div class="particle" style="left:62%;animation-delay:7s;"></div>
+<div class="particle" style="left:80%;animation-delay:2s;"></div>
+<div class="particle" style="left:92%;animation-delay:4s;"></div>
+
+<!-- MAIN CARD -->
+
+<div class="container">
+
+    <div class="glass">
+
+        <!-- PROFILE -->
+
+        <img src="profile.png" class="profile" id="profileBtn" alt="Jenskiee">
+
+        <!-- MUSIC INFO -->
+
+        <div class="music-info">
+            <i class="fa-solid fa-music"></i>
+            <span id="musicStatus">
+                Click my profile picture to play the song.
+            </span>
+        </div>
+
+        <h1>Jenskiee</h1>
+
+        <h3>BS Criminology Student | Athlete</h3>
+
+        <p>
+            Welcome to my world.
+            This website showcases my journey,
+            achievements, hobbies, experiences,
+            and contact information.
+            Explore my world and learn more
+            about who I am.
+        </p>
+
+        <!-- DASHBOARD BUTTON -->
+
+        <button class="enter-btn" id="enterBtn">
+            <i class="fa-solid fa-user-shield"></i>
+            Secure Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2>
+            <i class="fa-solid fa-lock"></i>
+            Security Verification
+        </h2>
+
+        <p style="color:white;margin-bottom:15px;">
+            Unscramble my first name to enter the dashboard.
+        </p>
+
+        <h3 style="color:white;letter-spacing:8px;margin-bottom:20px;">
+            Y N E J L E N
+        </h3>
+
+        <div class="input-group">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter the correct name">
+
+            <i class="fa-solid fa-eye toggle" id="toggle"></i>
+
+        </div>
+
+        <div class="modal-buttons">
+
+            <button class="cancel" id="cancel">
+                Cancel
+            </button>
+
+            <button class="login" id="login">
+                Enter Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="sandali.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+
+/* ==========================
+   MUSIC PLAYER
+========================== */
+
+const profileBtn = document.getElementById("profileBtn");
+const bgMusic = document.getElementById("bgMusic");
+const musicStatus = document.getElementById("musicStatus");
+
+let isPlaying = false;
+
+profileBtn.addEventListener("click", function(){
+
+    if(isPlaying){
+
+        bgMusic.pause();
+
+        isPlaying = false;
+
+        musicStatus.innerHTML =
+        '<i class="fa-solid fa-music"></i> Click my profile picture to play the song.';
+
+        profileBtn.classList.remove("playing");
+
+    }else{
+
+        bgMusic.play();
+
+        isPlaying = true;
+
+        musicStatus.innerHTML =
+        '<i class="fa-solid fa-pause"></i> Now Playing... Click again to pause.';
+
+        profileBtn.classList.add("playing");
+
+    }
+
+});
+
+/* ==========================
+   OPEN SECURITY MODAL
+========================== */
+
+document.getElementById("enterBtn").onclick = function(){
+
+    document.getElementById("modal").style.display = "flex";
+
+};
+
+/* ==========================
+   CLOSE MODAL
+========================== */
+
+document.getElementById("cancel").onclick = function(){
+
+    document.getElementById("modal").style.display = "none";
+
+};
+
+/* ==========================
+   SHOW / HIDE PASSWORD
+========================== */
+
+const pass = document.getElementById("password");
+const toggle = document.getElementById("toggle");
+
+toggle.onclick = function(){
+
+    if(pass.type === "password"){
+
+        pass.type = "text";
+
+        toggle.classList.remove("fa-eye");
+        toggle.classList.add("fa-eye-slash");
+
+    }else{
+
+        pass.type = "password";
+
+        toggle.classList.remove("fa-eye-slash");
+        toggle.classList.add("fa-eye");
+
+    }
+
+};
+
+/* ==========================
+   LOGIN
+========================== */
+
+document.getElementById("login").onclick = function(){
+
+    let code = pass.value.toLowerCase().trim();
+
+    if(code === "jenelyn"){
+
+        document.body.style.opacity = "0";
+
+        setTimeout(function(){
+
+            window.location.href = "dashboard.html";
+
+        },500);
+
+    }else{
+
+        alert("Incorrect access code.");
+
+    }
+
+};
+
+/* ==========================
+   CLOSE MODAL WHEN CLICKING OUTSIDE
+========================== */
+
+window.onclick = function(event){
+
+    const modal = document.getElementById("modal");
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
